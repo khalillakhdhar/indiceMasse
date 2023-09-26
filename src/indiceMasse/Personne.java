@@ -100,4 +100,17 @@ public class Personne {
 		// Math.round librairie d'arrondie
 	}
 
+
+
+
+	@Override
+	public String toString() {
+		return "Personne [" + (nom != null ? "nom=" + nom + ", " : "")
+				+ (prenom != null ? "prenom=" + prenom + ", " : "") + "age=" + age + ", taille=" + taille + ", poids="
+				+ poids + ", indice()=" + indice() + "]";
+	}
+	
+	
+	
+
 }
