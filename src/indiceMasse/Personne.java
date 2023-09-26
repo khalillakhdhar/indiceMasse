@@ -99,17 +99,31 @@ public class Personne {
 		return (int) Math.round(poids/(taille*taille));
 		// Math.round librairie d'arrondie
 	}
+public String evaluation()
+{
+if(indice()<20)
+	return "maigre";
+else if(indice()<=25)
+{
+return "idéale";	
+}
+else
+	return "surpoid";
+}
 
 
 
 
-	@Override
-	public String toString() {
-		return "Personne [" + (nom != null ? "nom=" + nom + ", " : "")
-				+ (prenom != null ? "prenom=" + prenom + ", " : "") + "age=" + age + ", taille=" + taille + ", poids="
-				+ poids + ", indice()=" + indice() + "]";
-	}
-	
+@Override
+public String toString() {
+	return "Personne [" + (nom != null ? "nom=" + nom + ", " : "") + (prenom != null ? "prenom=" + prenom + ", " : "")
+			+ "age=" + age + ", taille=" + taille + ", poids=" + poids + ", indice()=" + indice() + ", "
+			+ (evaluation() != null ? "evaluation()=" + evaluation() : "") + "]";
+}
+
+
+
+
 	
 	
 
